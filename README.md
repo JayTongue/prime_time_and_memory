@@ -89,6 +89,7 @@ Compared to the other functions, sympy and primePy both proverbially ran in a bl
 
 ### 3. Pandas and Numpy Are Very Bad At This
 I had heard a lot about how Pandas and Numpy were both very powerful libraries which were largely C-optimized. I thought that this meant that using them as a the pd.DataFrame and np.array would therefore be a fast and expedient way of achieving the task at hand. I was sorely mistaken. They both consistently took longer and used more memory at peak than all other functions, sometimes taking an additional order of magnitude than other functions.
+
   Upon reflection, I have found both Pandas and Numpy to be very fast before, but largely at tasks which can be vectorized, such as multiplying one large array by another large array, or processing all data in a given DataFrame column. Both functions still rely on loops to remove numbers one by one. Not only does this negate any inherent advantage of the library's strengths, it exacterbates its weaknesses by forcing it to retrieve its memory objects repeatedly for each loop. 
 Pandas and Numpy are still very powerful and may be the best tool for many things, but for the love of everything good, don't use them as a data structure for running the Sieve of Eratosthenes. 
 
@@ -97,6 +98,7 @@ At the beginning of this project, I was only aware of two ways of finding prime 
 
 ### 5. Smart_human Can Be Dumb
 Smart_human is probably my favorite function in the whole code. It is a reflection of me if I were to try to be "smart" about finding prime numbers with trial division. I would look at the number and if it ended in an even number, know immediately that it was multiple of 2, and if not 2 itself, then not prime. Similarly, numbers which end in 5 would be divisible by 5, and numbers ending in 0 would be divisible by both 2 and 5. I would also only use trial division for prime numbers smaller than the square root + 1 of the candidate number since multiples come in pairs and all numbers are either prime numbers or multiples of prime numbers. See how smart I am? To my credit, straight-up smart_human was much faster and memory efficient than plain human. 
+
   Where smart_human got obliterated was when Numba's JIT compiler got involved. After many efforts, the only way to get Numba to work on smart_human was to isolate the string processing function from the math computation function, with Numba's decorator only being applied to the math function. So while numba_human crushed 2<sup>16</sup> in 11 seconds, numba_smart_human took over 38 minutes, much slower than just smart_human by itself. I wonder if this is also due to a misuse of Numba. Perahps asking it to translate between compiled and non-compiled code required additional resources. Knowing the strength of Numba may allow for more efficient running by writing facially less efficient code. This is very interesting to me.
 
 ### 6. I Never Want To Do My Own Memory Management
