@@ -17,7 +17,7 @@ Contains the time and memory function, as well as two optional functions for jus
 _________________________________________________________
 
 ## B. Running the Code 
-When run, sieve_tests.py will prompt you for a number. This number will be x where the code will loop through each function in range(2, x), calculating prime numbers to 2<sup>x<\sup> each time. As predicted, linear increases in x corresponded with exponential incraeses in time.
+When run, sieve_tests.py will prompt you for a number. This number will be x where the code will loop through each function in range(2, x), calculating prime numbers to 2<sup>x</sup> each time. As predicted, linear increases in x corresponded with exponential incraeses in time.
 
 Running the full code on a Raspberry Pi 4B with 2gb RAM:
 
