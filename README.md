@@ -60,7 +60,7 @@ The output created by sieve_tests.py is a 3D graph. If you're in Pycharm, you ca
 This is a screen cap of the 3D graph at 2<sup>16</sup>
 ![alt text](https://github.com/JayTongue/prime_time_and_memory/blob/main/exhibit/2%5E16.jpg)
 
-These were the results from calculating primes up to 2<sup>16</sup>:
+These were the results from the last loop, i.e. primes in range(2, 2<sup>16</sup>):
 
 | Function | Time (Seconds) | Peak Memory (KiB) |
 |--------------|-----------|------------|
