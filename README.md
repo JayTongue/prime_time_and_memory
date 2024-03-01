@@ -110,5 +110,5 @@ _____________________________
 ## E. Further Development
 
 1. Try to redeem Pandas and Numpy- Maybe if I used something like a Boolean array, it would play to the strengths of these data structures, and could probably improve them a lot.
-2. Iterate through line styles to make the graph more readable and inlusive.
+2. Iterate through line styles to make the graph more readable and inclusive.
 3. Python vectorization- This code relied a LOT on loops, and this was largely intentional. However, I would like to explore native and pythonic ways of using vectorization.
